@@ -19,7 +19,7 @@ services:
     image: metabase/metabase:latest
     container_name: metabase-censo
     ports:
-      - 3000:3000
+      - 5432:5432
     environment:
       MB_DB_TYPE: postgres
       MB_DB_HOST: postgres
