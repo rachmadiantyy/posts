@@ -1,6 +1,7 @@
 FROM docker.io/bitnami/spark:3.3.1
 
-COPY *.jar $SPARK_HOME/jars
+#COPY *.jar $SPARK_HOME/jars
+COPY libs/*.jar $SPARK_HOME/jars/
 
 RUN mkdir -p $SPARK_HOME/secrets
 COPY ./src/credentials/gcp-credentials.json $SPARK_HOME/secrets/gcp-credentials.json
